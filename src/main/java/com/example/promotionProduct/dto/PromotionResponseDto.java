@@ -17,15 +17,5 @@ public class PromotionResponseDto {
     private LocalDateTime startDateTime;
     private LocalDateTime endDateTime;
 
-    public static  PromotionResponseDto from(Promotion promotion) {
-        return new PromotionResponseDto(
-                promotion.getPromotionCd(),
-                promotion.getProductCd(),
-                promotion.getProduct() != null ? promotion.getProduct().getProductName() : null,
-                promotion.getPromotionPrice(),
-                promotion.getStartDateTime(),
-                promotion.getEndDateTime()
-        );
-    }
 
 }

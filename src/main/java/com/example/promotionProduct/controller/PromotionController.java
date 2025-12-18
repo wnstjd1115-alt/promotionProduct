@@ -20,8 +20,10 @@ public class PromotionController {
     private final PromotionService promotionService;
 
     @GetMapping
-    public List<PromotionResponseDto> getPromotion() {
-        return promotionService.getActivePromotions(LocalDateTime.now());
+    public ResponseEntity<List<PromotionResponseDto>> getPromotion() {
+        return ResponseEntity.ok(
+                promotionService.getActivePromotions(LocalDateTime.now())
+        );
     }
 
     @GetMapping("/native")
