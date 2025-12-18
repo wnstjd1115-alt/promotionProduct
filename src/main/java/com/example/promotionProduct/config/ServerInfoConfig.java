@@ -18,7 +18,8 @@ public class ServerInfoConfig {
 
             System.out.println("=================================");
             System.out.println("🚀 Application started!");
-            System.out.println("👉 Local:    http://localhost:" + port);
+            System.out.println("👉 Local API_1:    http://localhost:" + port + "/api/v1/promotions") ;
+            System.out.println("👉 Local API_2:    http://localhost:" + port + "/api/v1/promotions/native") ;
             System.out.println("👉 Network:  http://" + host + ":" + port);
             System.out.println("=================================");
         };

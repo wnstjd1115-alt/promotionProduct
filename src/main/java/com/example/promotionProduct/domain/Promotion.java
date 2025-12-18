@@ -1,9 +1,6 @@
 package com.example.promotionProduct.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,5 +28,9 @@ public class Promotion {
 
     @Column(name = "END_DT")
     LocalDateTime endDateTime;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PROD_CD", referencedColumnName = "PROD_CD", insertable = false, updatable = false)
+    private Product product;
 
 }

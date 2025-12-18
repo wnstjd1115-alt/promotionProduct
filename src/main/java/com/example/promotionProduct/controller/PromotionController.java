@@ -6,8 +6,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -18,9 +20,19 @@ public class PromotionController {
     private final PromotionService promotionService;
 
     @GetMapping
-    public ResponseEntity<List<PromotionResponseDto>> getPromotions() {
+    public List<PromotionResponseDto> getPromotion() {
+        return promotionService.getActivePromotions(LocalDateTime.now());
+    }
+
+    @GetMapping("/native")
+    public ResponseEntity<List<PromotionResponseDto>> getPromotionsNative() {
         return ResponseEntity.ok(
-                promotionService.getActivePromotions()
+                promotionService.getActivePromotionsNative()
         );
     }
+
+
+
+
+
 }
