@@ -1,5 +1,6 @@
 package com.example.promotionProduct.domain;
 
+import com.example.promotionProduct.common.enums.UseYn;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;

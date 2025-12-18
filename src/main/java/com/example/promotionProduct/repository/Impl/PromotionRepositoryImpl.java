@@ -1,6 +1,7 @@
-package com.example.promotionProduct.repository;
+package com.example.promotionProduct.repository.Impl;
 
 import com.example.promotionProduct.dto.PromotionResponseDto;
+import com.example.promotionProduct.repository.PromotionRepositoryCustom;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class PromotionRepositoryImpl implements PromotionRepositoryCustom{
+public class PromotionRepositoryImpl implements PromotionRepositoryCustom {
 
     private final EntityManager em;
 
