@@ -25,7 +25,8 @@ public class PromotionController {
                 promotionService.getActivePromotions(LocalDateTime.now())
         );
     }
-
+    
+    //주석 추가 테스트
     @GetMapping("/native")
     public ResponseEntity<List<PromotionResponseDto>> getPromotionsNative() {
         return ResponseEntity.ok(
