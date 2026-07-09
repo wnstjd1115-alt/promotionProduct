@@ -19,6 +19,7 @@ public class PromotionController {
 
     private final PromotionService promotionService;
 
+    //테스트 
     @GetMapping
     public ResponseEntity<List<PromotionResponseDto>> getPromotion() {
         return ResponseEntity.ok(
